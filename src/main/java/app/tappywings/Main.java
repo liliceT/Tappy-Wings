@@ -24,7 +24,7 @@ public class Main extends Application {
 
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/Icon/Icon.png")));
         stage.getIcons().add(icon);
-        stage.setOnCloseRequest(event -> {
+        stage.setOnCloseRequest(_ -> {
             System.exit(0);
         });
         stage.show();

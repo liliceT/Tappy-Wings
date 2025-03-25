@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="500.0" style="-fx-background-image: url('/Images/Backgrounds/background-day-blur.png');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.tappywings.GameController">
+<AnchorPane fx:id="GamePane" prefHeight="700.0" prefWidth="500.0" style="-fx-background-image: url('/Images/Backgrounds/background-day-blur.png');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.tappywings.GameController">
    <children>
       <ImageView fitHeight="700.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
          <image>
