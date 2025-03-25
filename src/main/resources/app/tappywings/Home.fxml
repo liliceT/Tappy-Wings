@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.tappywings.Home">
-
+<AnchorPane fx:id="MenuPane" prefHeight="700.0" prefWidth="500.0" style="-fx-background-image: url('/Images/Backgrounds/background-day-blur.png');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.tappywings.HomeController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Backgrounds/background-day-blur.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Start" fitHeight="549.0" fitWidth="351.0" layoutX="74.0" layoutY="95.0" onMouseClicked="#StartGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Misc/message.png" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="Color" layoutX="22.0" layoutY="645.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #52c462;" />
+      <Text layoutX="22.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color of bird">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
