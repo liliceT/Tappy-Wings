@@ -1,13 +1,21 @@
 package app.tappywings;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Random;
 
 public class GameController implements Runnable {
 
-    public static Thread GameThread;
+    public AnchorPane GamePane;
+
+    public ImageView Bird;
+
+    public Thread GameThread;
 
     @FXML
     private void initialize() {
@@ -15,6 +23,8 @@ public class GameController implements Runnable {
         GameThread.start();
 
         loadBird();
+
+//        loadPipes();
 
     }
 
@@ -36,8 +46,9 @@ public class GameController implements Runnable {
             lastTime = currentTime;
 
             if (delta >= 1) {
-                System.out.println("Test");
+
                 GameLoop();
+
                 delta--;
             }
             if (timer >= 1000000000) {
@@ -46,7 +57,7 @@ public class GameController implements Runnable {
         }
     }
 
-    public ArrayList<ImageView> Pipes = new ArrayList<>();
+
 
     public void GameLoop() {
 
@@ -56,12 +67,30 @@ public class GameController implements Runnable {
 
     public void loadBird(){
 
+        Bird.setLayoutX((double) 500 / 2 - Bird.getImage().getWidth() / 2);
+        Bird.setLayoutY(425);
+        Bird.setScaleX(2); Bird.setScaleY(2);
 
+        GamePane.getChildren().add(Bird);
 
     }
 
-    public void loadPipes(){
+    private ArrayList<ImageView> Pipes = new ArrayList<>();
 
+    public void loadPipes() {
+
+        Random random = new Random();
+
+        ImageView lowerpipe = new ImageView();
+        lowerpipe.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/Misc/pipe.png"))));
+        lowerpipe.setLayoutX(50);
+        lowerpipe.setLayoutY(random.nextInt(200));
+
+        ImageView upperpipe = new ImageView();
+        upperpipe.rotateProperty().set(180);
+        upperpipe.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/Misc/pipe.png"))));
+        upperpipe.setLayoutX(50);
+        upperpipe.setLayoutY(random.nextInt(200));
 
 
     }

@@ -19,7 +19,7 @@
             <Image url="@../../Images/Misc/message.png" />
          </image>
       </ImageView>
-      <ChoiceBox fx:id="Color" layoutX="22.0" layoutY="645.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #52c462;" />
+      <ChoiceBox fx:id="ColorChoice" layoutX="22.0" layoutY="645.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #52c462;" />
       <Text layoutX="22.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color of bird">
          <font>
             <Font size="14.0" />
